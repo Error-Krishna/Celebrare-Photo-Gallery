@@ -3,8 +3,8 @@ import assert from 'node:assert';
 import {
   favouritesReducer,
   initialFavouritesState,
-  FavouritesState,
 } from '../src/reducers/favouritesReducer.ts';
+import type { FavouritesState } from '../src/reducers/favouritesReducer.ts';
 
 describe('favouritesReducer', () => {
   it('should add a photo ID to empty favourites', () => {
