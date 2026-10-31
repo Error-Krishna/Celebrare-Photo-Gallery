@@ -1,5 +1,6 @@
 # Frame — Celebrare Photo Gallery
 
+[![Live Production](https://img.shields.io/badge/Vercel-Live%20Production%20App-000000?logo=vercel&logoColor=white)](https://frame-celebrare-photo-gallery.vercel.app/)
 [![CI Quality Pipeline](https://github.com/Error-Krishna/Celebrare-Photo-Gallery/actions/workflows/ci.yml/badge.svg)](https://github.com/Error-Krishna/Celebrare-Photo-Gallery/actions/workflows/ci.yml)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x%20%2F%207.x-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
@@ -56,9 +57,10 @@
 
 ## 2. Live Deployment & Repository
 
+- **Live Production URL**: [https://frame-celebrare-photo-gallery.vercel.app/](https://frame-celebrare-photo-gallery.vercel.app/)
 - **GitHub Repository**: [https://github.com/Error-Krishna/Celebrare-Photo-Gallery](https://github.com/Error-Krishna/Celebrare-Photo-Gallery)
 - **CI/CD Pipeline Status**: [GitHub Actions Runs](https://github.com/Error-Krishna/Celebrare-Photo-Gallery/actions)
-- **Production Deployment Configuration**: Configured with `vercel.json` for zero-configuration deployment to [Vercel](https://vercel.com).
+- **Hosting Platform**: Vercel Global Edge Network (Continuous Deployment from `main`)
 
 ---
 
@@ -247,20 +249,15 @@ The repository runs `.github/workflows/ci.yml` on every push to `main` and on al
 
 ## 9. Production Deployment (Vercel)
 
-The project includes [`vercel.json`](vercel.json) configuring the framework preset to Vite, the build command to `npm run build`, and the output directory to `dist`.
+The application is deployed in production on Vercel at [https://frame-celebrare-photo-gallery.vercel.app/](https://frame-celebrare-photo-gallery.vercel.app/).
 
-### Deploying to Vercel
+The repository includes [`vercel.json`](vercel.json) configuring the framework preset to Vite, the build command to `npm run build`, and the output directory to `dist`.
 
-#### Method A: Vercel Dashboard (Recommended)
-1. Go to [https://vercel.com/new](https://vercel.com/new).
-2. Import the GitHub repository: `Error-Krishna/Celebrare-Photo-Gallery`.
-3. Vercel automatically detects Vite settings from `vercel.json`.
-4. Click **Deploy**. Any future push to `main` automatically deploys a new production release.
+### Deployment Architecture & CI/CD Linkage
 
-#### Method B: Vercel CLI
-```bash
-npx vercel --prod
-```
+1. Pushing commits to `main` triggers `.github/workflows/ci.yml`.
+2. Vercel automatically detects passing commits on `main` and deploys them to the production edge network.
+3. Pull requests automatically generate preview environments with isolated deployment URLs for verification before merging.
 
 ---
 
