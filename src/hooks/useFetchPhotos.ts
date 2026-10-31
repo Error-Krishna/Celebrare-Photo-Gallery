@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import type { Photo } from '../types/photo';
+import { PICSUM_API_URL } from '../config/api';
 
-const PICSUM_API_URL = 'https://picsum.photos/v2/list?limit=30';
+
 
 export interface UseFetchPhotosResult {
   photos: Photo[];
