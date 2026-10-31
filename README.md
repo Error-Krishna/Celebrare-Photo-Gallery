@@ -68,6 +68,7 @@
 
 - **Editorial Photography Grid**: Displays 30 high-resolution photos with aspect ratio preservation (`aspect-[4/3]`) and smooth hover zoom effects.
 - **Client-Side Real-Time Search**: Sub-millisecond author search filtering over the fetched 30 items without additional API round-trips.
+- **One-Click Liked Photos Filter**: A dedicated toggle button that instantly filters the entire gallery to display all favourited photos with live counter badges and clean empty-state transitions.
 - **Predictable State Management**: Uses a pure reducer (`favouritesReducer`) with strict immutability to manage favourite photo IDs.
 - **Resilient Offline Persistence**: Favourites are read synchronously on mount via a lazy initializer (`() => ({ favouriteIds: getStoredFavourites() })`) and written via reactive effects, complete with corrupted-JSON recovery.
 - **Network Lifecycle Protection**: Uses native browser `fetch` combined with `AbortController` to cancel pending HTTP requests if the component unmounts.
